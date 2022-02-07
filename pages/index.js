@@ -1,23 +1,23 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+// import Head from 'next/head';
+// import Image from 'next/image';
+// import styles from '../styles/Home.module.css';
 import {getSortedPostsData} from '../lib/posts';
 import {Tag, Date} from '../src/components/'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+export async function getStaticProps({params}) {
+  const allPostsData = await getSortedPostsData() 
   return {
     props: {
-      allPostsData,
-    },
-  };
+      allPostsData, 
+    }
+  }
 }
 
 export default function Home({allPostsData}) {
   return (
     <div>
-     {allPostsData.map(({id, date, title, tags}) => {
-        return hey (
+     {allPostsData.map(({id, date, title, tags, content}) => {
+        return (
           <>
             <li>{title}</li>
             <Date date={date}/>
