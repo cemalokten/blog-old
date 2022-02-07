@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url('/fonts/bold.woff2') format('woff2'),
+    url('/fonts/bold.woff') format('woff');
+}
+  
+@font-face {
+  font-family: 'medium';
+  src: url('/fonts/medium.woff2') format('woff2'),
+    url('/fonts/medium.woff') format('woff');
+}
+
+body {
+  margin: 1rem;
+  font-family: 'medium';
+  font-size: 3rem;
+}

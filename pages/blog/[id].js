@@ -17,6 +17,6 @@ export async function getStaticPaths() {
 }
 
 export default function Post({postData}) {
-  console.log({postData})
+  // Use dangerouslySetInnerHTML because only updated by me 
   return <div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>;
 }
