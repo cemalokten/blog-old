@@ -1,16 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: 'LuculentRegular';
+  src: url('../public/fonts/luculent.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: 'LuculentItalic';
+  src: url('../public/fonts/luculenti.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: 'bold';
+  src: url('../public/fonts/bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url('../public/fonts/medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

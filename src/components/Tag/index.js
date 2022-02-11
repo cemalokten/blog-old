@@ -1,10 +1,15 @@
-import React from 'react';
+import React from 'react'
+import * as S from '../Styles'
+import { v4 as uuidv4 } from 'uuid'
 
-const Tag = ({tags}) => {
-  const arr = tags.split(',')
-  return arr.map(label => {
-    return <li>{label}</li>;
-  });
-};
+const Tag = ({ tags }) => {
+  return tags.map((obj) => {
+    return (
+      <S.Tag key={uuidv4()} background={obj.background}>
+        {obj.tag}
+      </S.Tag>
+    )
+  })
+}
 
-export default Tag;
+export default Tag

@@ -1,24 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import * as S from '../Styles'
 
-const style = (color) => {
-  return {
-    border: 'none',
-    backgroundColor: color, 
-    borderRadius: '10px',
-    fontFamily: 'bold',
-    fontSize: '1.5rem',
-    paddingLeft: '0.8rem',
-    paddingRight: '0.8rem',
-    transform: 'rotate(6deg)'
-  };
-};
-const Button = ({children}) => {
+const Button = ({ children, background, link }) => {
   return (
-    <button style={style('red')}>
-      <Link href={'/'}>{children}</Link>
-    </button>
-  );
-};
+    <Link href={link} passHref>
+      <S.Span background={background}>{children}</S.Span>
+    </Link>
+  )
+}
 
-export default Button;
+export default Button
